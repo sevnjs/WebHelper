@@ -29,7 +29,6 @@ const WebHelper = () => {
                 --s:var(--sat,80%);
                 --l:var(--light,15%);
                 position: relative;
-                display: inline-block;
                 .copyIcon{
                     position: absolute;
                     top: .5em;

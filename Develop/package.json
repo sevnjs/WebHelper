@@ -1,0 +1,22 @@
+{
+  "name": "sevnjs.github.io",
+  "version": "0.9.4",
+  "description": "Dev SevnJS",
+  "main": "main.js",
+  "scripts": {
+    "server": "nodemon SERVER/server.js",
+    "sync": "browser-sync start -p '127.0.0.1:3000' --port 4000 --files '**.*, */**.*, web/**/*' --no-inject-changes --ws",
+    "dev": "concurrently \"npm run server\" \"npm run sync\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

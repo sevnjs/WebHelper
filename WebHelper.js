@@ -578,6 +578,10 @@ const WebHelper = () => {
 
     self.PageNav = () => {
 
+        let googleFontsHeaders = `<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`
+        append("head",googleFontsHeaders)
+
         PageNavSelf = {}
         PageNavSelf.init = () => {
             var googleRoundIcon = `https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200`
@@ -1051,7 +1055,7 @@ const WebHelper = () => {
                     if (variable[1] == "fontFamily") {
                         append(`#${id}Span`, gen(select, variable[1], "", "themeselect", { "onchange": "WebHelper().PageNav().customizer().updateVar(this)" }))
 
-                        if (fontList == undefined) var fontList = new Set(["Poppins", "Exo", "Play", "Bebas Neue", "Comic Neue", "Cutive Mono", "Permanent Marker", "Dancing Script", "Roboto", "Montserrat", "Gulzar", "Splash", "Bebas Neue", "Comic Neue", "Cutive Mono", "Dancing Script", "Tahoma", "Arial", "Lora", "Hind", "Cairo", "Bitter", "The Nautigal", "Abel", "Yellowtail", "Caveat", "Open sans", "Verdana", "Inter", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "sans serif"].sort())
+                        if (fontList == undefined) var fontList = new Set(["Poppins", "Exo", "Play", "Bebas Neue", "Comic Neue", "Cutive Mono", "Permanent Marker", "Dancing Script", "Moon Dance", "Roboto", "Montserrat", "Gulzar", "Splash", "Bebas Neue", "Comic Neue", "Cutive Mono", "Dancing Script", "Tahoma", "Arial", "Lora", "Hind", "Cairo", "Bitter", "The Nautigal", "Abel", "Yellowtail", "Caveat", "Open sans", "Verdana", "Inter", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "sans serif"].sort())
                         fontList.forEach(f => {
                             append(`#${variable[1]}`, gen(option, "", f, "", { 'value': f }))
                         })
